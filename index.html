@@ -1,79 +1,118 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>[Your Name] - Graphic Design Portfolio</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <title>Coming Soon!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 3rem;
+            margin-top: 100px;
+        }
+
+        p {
+            color: #666666;
+            font-size: 1.2rem;
+            margin-top: 50px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .countdown span {
+            background-color: #333333;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 2rem;
+            margin: 0 10px;
+            padding: 10px;
+            width: 80px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .countdown span {
+                font-size: 1.5rem;
+                padding: 5px;
+                width: 60px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-	<header>
-		<nav>
-			<a href="#" class="logo">[Your Name]</a>
-			<ul class="menu">
-				<li><a href="#logo-design">Logo Design</a></li>
-				<li><a href="#print-design">Print Design</a></li>
-				<li><a href="#web-design">Web Design</a></li>
-				<li><a href="#illustration">Illustration</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-			<div class="burger">
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-		</nav>
-		<div class="hero">
-			<h1>Graphic Design Portfolio</h1>
-		</div>
-	</header>
-	<main>
-		<section id="logo-design">
-			<h2>Logo Design</h2>
-			<div class="gallery">
-				<img src="[path to image]" alt="Logo Design 1">
-				<img src="[path to image]" alt="Logo Design 2">
-				<img src="[path to image]" alt="Logo Design 3">
-			</div>
-		</section>
-		<section id="print-design">
-			<h2>Print Design</h2>
-			<div class="gallery">
-				<img src="[path to image]" alt="Print Design 1">
-				<img src="[path to image]" alt="Print Design 2">
-				<img src="[path to image]" alt="Print Design 3">
-			</div>
-		</section>
-		<section id="web-design">
-			<h2>Web Design</h2>
-			<div class="gallery">
-				<img src="[path to image]" alt="Web Design 1">
-				<img src="[path to image]" alt="Web Design 2">
-				<img src="[path to image]" alt="Web Design 3">
-			</div>
-		</section>
-		<section id="illustration">
-			<h2>Illustration</h2>
-			<div class="gallery">
-				<img src="[path to image]" alt="Illustration 1">
-				<img src="[path to image]" alt="Illustration 2">
-				<img src="[path to image]" alt="Illustration 3">
-			</div>
-		</section>
-		<section id="contact">
-			<h2>Contact</h2>
-			<form>
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="name" required>
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required>
-				<label for="message">Message:</label>
-				<textarea id="message" name="message" required></textarea>
-				<input type="submit" value="Send">
-			</form>
-		</section>
-	</main>
+    <h1>Coming Soon!</h1>
+    <p>We're currently working on something awesome. Stay tuned!</p>
+    <div class="countdown">
+        <span id="days"></span>
+        <span id="hours"></span>
+        <span id="minutes"></span>
+        <span id="seconds"></span>
+    </div>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("June 1, 2023 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in elements with corresponding IDs
+            document.getElementById("days").innerHTML = days + "d ";
+            document.getElementById("hours").innerHTML = hours + "h ";
+            document.getElementById("minutes").innerHTML = minutes + "m ";
+            document.getElementById("seconds").innerHTML = seconds + "s ";
+
+            // If the count down is over, show message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("days").innerHTML = "";
+                document.getElementById("hours").innerHTML = "";
+                document.getElementById("minutes").innerHTML = "";
+                document.getElementById("seconds").innerHTML = "";
+                document.querySelector(".countdown").innerHTML = "COMING SOON!";
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
 
 
 <!-- <!DOCTYPE html>
