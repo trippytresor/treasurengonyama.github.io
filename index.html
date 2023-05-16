@@ -1,125 +1,4 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title>Coming Soon!</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #f2f2f2;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        html {
-    background-color: #bae719;
-}
-
-        h1 {
-            color: #333333;
-            font-size: 3rem;
-            margin-top: 100px;
-        }
-
-        p {
-            color: #666666;
-            font-size: 1.2rem;
-            margin-top: 50px;
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-
-        .countdown span {
-            background-color: #333333;
-            border-radius: 5px;
-            color: #ffffff;
-            font-size: 2rem;
-            margin: 0 10px;
-            padding: 10px;
-            width: 80px;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .countdown span {
-                font-size: 1.5rem;
-                padding: 5px;
-                width: 60px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <h1>Coming Soon!</h1>
-    <p>We're currently working on something awesome. Stay tuned!</p>
-    <div class="countdown">
-        <span id="days"></span>
-        <span id="hours"></span>
-        <span id="minutes"></span>
-        <span id="seconds"></span>
-    </div>
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("June 1, 2023 00:00:00").getTime();
-
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-
-            // Get today's date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Output the result in elements with corresponding IDs
-            document.getElementById("days").innerHTML = days + "d ";
-            document.getElementById("hours").innerHTML = hours + "h ";
-            document.getElementById("minutes").innerHTML = minutes + "m ";
-            document.getElementById("seconds").innerHTML = seconds + "s ";
-
-            // If the count down is over, show message
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("days").innerHTML = "";
-                document.getElementById("hours").innerHTML = "";
-                document.getElementById("minutes").innerHTML = "";
-                document.getElementById("seconds").innerHTML = "";
-                document.querySelector(".countdown").innerHTML = "COMING SOON!";
-            }
-        }, 1000);
-    </script>
-
-</body>
-
-</html>
-
-
-<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -128,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="script.js"></script>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/montserrat">
   <link rel="icon" type="image/x-icon" href="images/favicon.png">
@@ -145,55 +26,196 @@
     <img src="images/site-loader.gif" alt="Treasure Ngonyama">
   </aside>
 
-  <!--HEADER--
-  <img src="images/logo.png" alt="Logo" width="400" height="25" class="logo">
+  <!--NAVBAR-->
+  <nav>
+    <a href="#section0" class="logo"><img src="images/logo.png" alt="Logo" width="400" height="25"
+        onclick="changeSection('section0')"></a>
+    <ul class="menu">
+      <li><a href="#workgallery">Work</a></li>
+      <li><a href="#"onclick="changeSection('aboutsection'); window.scrollTo(0, 0);">About</a></li>
+    </ul>
+  </nav>
 
-  <!--SIDENAV--
-  <div id="mySidenav" class="sidenav">
-    <a href="#" class="nav-link">Index</a>
-    <a href="#" class="nav-link">01 - Project 1</a>
-    <a href="#" class="nav-link">02 - Project 2</a>
-    <a href="#" class="nav-link">03 - Project 3</a>
-    <a href="#" class="nav-link">About</a>
+  <!--SHOWREEL-->
+  <div class="section" id="section0">
+    <div class="videocenter">
+      <video id="player" controls width="100%">
+        <source src="video/showreel.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
 
-  <!--EMAIL--
-  <div id="myEmail" class="email">
-    <a href="mailto:treasurengonyama@gmail.com">treasurengonyama@gmail.com</a>
+  <!--SECTIONS-->
+
+  <div class="section" id="aboutsection" style="display: none;">
+    <h2>About</h2>
+    <div class="about-image"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+    <p id="about-paragraph">Hello! My name is Treasure. 
+ 
+      I am currently working as a designer and animator. 
+      I create Motion Graphics, Art Direction and 3D Animation.  
+      </p>
+      <br>
+      <h2>Contact</h2>
+      <p id="contact-paragraph">treasurengonyama@gmail.com</p>
   </div>
 
-  <!--SHOWREEL--
-  <div class="videocenter">
-    <video id="myVideo" width="800" autoplay muted loop>
-      <source src="video/showreel.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+  <div class="section" id="section1" style="display: none;">
+    <h2>Section 1</h2>
+    <p>Section 1 content goes here.</p>
+
+    <video id="player" controls width="70%">
+      <source src="video/showreel.mp4" type="video/mp4" />
     </video>
-    <img src="images/unmute.png" class="player-buttons" onclick="toggleMute();"></div>
   </div>
 
-  <!--GALLERY--
-  <div class="container">
-    <img src="images/gallery01.png" alt="" srcset="" class="galleryimg">
-    <img src="images/gallery01.png" alt="" srcset="" class="galleryimg">
-    <img src="images/gallery01.png" alt="" srcset="" class="galleryimg">
-    <img src="images/gallery01.png" alt="" srcset="" class="galleryimg">
-    <img src="images/gallery01.png" alt="" srcset="" class="galleryimg">
-    <img src="images/gallery01.png" alt="" srcset="" class="galleryimg">
+  <div class="section" id="section2" style="display: none;">
+    <div class="sectioncontainer">
+      <h2 class="text-center">BENT</h2>
+      <p class="text-center">BENT is a brand inspired by the early days of animation, following the topic of Silence is
+        Golden,
+        Rubber Hose animation was the first animation style that became standardized in the American animation industry.
+        The defining feature of the style is arms and legs that are typically simple, flowing curves, without
+        articulation - limbs that bend.
+        The stories of the time made heavy use of the comedic style called slapstick, this is characterised by the use
+        of physical gags to communicate.
+        BENT takes these elements and elevates them to a new level. This is a brand that finds the simplest and toughest
+        solution to creating the strongest board possible,
+        a brand that can bend but will never break.</p>
+      <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+      </div>
+    </div>
   </div>
 
-  <!--FOOTER--
+  <div class="section" id="section3" style="display: none;">
+    <div class="sectioncontainer">
+      <h2 class="text-center">Bent</h2>
+      <p class="text-center">Section 2 content goes here.</p>
+      <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="section4" style="display: none;">
+    <div class="sectioncontainer">
+      <h2 class="text-center">Bent</h2>
+      <p class="text-center">Section 2 content goes here.</p>
+      <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--GALLERY-->
+  <div class="container" id="workgallery">
+    <div class="box">
+
+      <div class="dream">
+        <div class="image-container" id="item1" onclick="changeSection('section1'); window.scrollTo(0, 0);">
+          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+          <div class="image-overlay">
+            <p>HAPPY DAYS</p>
+          </div>
+        </div>
+
+        <div class="image-container" id="item2" onclick="changeSection('section2'); window.scrollTo(0, 0);">
+          <img src="images/covers/cover2.gif" alt="Your Image" class="gallery-image">
+          <div class="image-overlay">
+            <p>BENT</p>
+          </div>
+        </div>
+        <div class="image-container" id="item3" onclick="changeSection('section3'); window.scrollTo(0, 0);">
+          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+          <div class="image-overlay">
+            <p>project 3</p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="dream">
+        <div class="image-container" id="item4" onclick="changeSection('section4'); window.scrollTo(0, 0);">
+          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+          <div class="image-overlay">
+            <p>Project 4</p>
+          </div>
+        </div>
+        <div class="image-container" id="item5" onclick="changeSection('section5'); window.scrollTo(0, 0);">
+          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+          <div class="image-overlay">
+            <p>Text to show on hover</p>
+          </div>
+        </div>
+        <div class="image-container" id="item6" onclick="changeSection('section6'); window.scrollTo(0, 0);">
+          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+          <div class="image-overlay">
+            <p>Text to show on hover</p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="dream">
+        <div class="image-container" id="item7" onclick="changeSection('section7'); window.scrollTo(0, 0);">
+          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+          <div class="image-overlay">
+            <p>Text to show on hover</p>
+          </div>
+        </div>
+        <div class="image-container" id="item8" onclick="changeSection('section8'); window.scrollTo(0, 0);">
+          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+          <div class="image-overlay">
+            <p>Text to show on hover</p>
+          </div>
+        </div>
+        <div class="image-container" id="item9" onclick="changeSection('section9'); window.scrollTo(0, 0);">
+          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+          <div class="image-overlay">
+            <p>Text to show on hover</p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <!--FOOTER-->
   <footer id="myFooter" class="footer">
-    <a href="#" class="footer-link">Linkedin</a>
-    <a href="#" class="footer-link">Behance</a>
-    <a href="#" class="footer-link">Instagram</a>
-    <a href="#" class="footer-link">Youtube</a>
+    <a href="https://www.linkedin.com/in/treasure-ngonyama-b6113a205/" target="_blank" class="footer-link">Linkedin</a>
+    <a href="https://www.behance.net/ngonyama" target="_blank" class="footer-link">Behance</a>
+    <a href="https://www.instagram.com/trippytresor/" target="_blank" class="footer-link">Instagram</a>
+    <a href="https://www.youtube.com/c/trippytresor" target="_blank" class="footer-link">Youtube</a>
   </footer>
 
-  <!--COPYRIGHT--
+  <!--COPYRIGHT-->
   <div id="myCopy" class="copy">
     <p class="copy-link">©2023 TREASURE NGONYAMA.</p>
   </div>
 
 </body>
 
-</html> -->
+</html>

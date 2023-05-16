@@ -1,5 +1,4 @@
-
-/* @import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
 
 html {
     background-color: #bae719;
@@ -63,34 +62,208 @@ aside {
     }
 }
 
-/* The logo */
-.logo {
-    position: fixed;
-    display: block;
-    margin-right: auto;
-    margin-top: -12, 5px;
-    /* Negative half of height. */
-    margin-left: -200px;
-    /* Negative half of width. */
-    left: 50%;
-    right: 50%;
-    padding-top: 32px;
-    mix-blend-mode: difference;
-    z-index: 1;
+/* The navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding: 0 20px;
+  mix-blend-mode: difference;
+  z-index: 3;
 }
 
-/* The sidenav */
-.sidenav {
-    font-family: 'Montserrat', sans-serif;
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
+.logo {
+  margin-right: 20px;
 }
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile devices */
+  .logo img {
+    width: 200px;
+    height: auto;
+  }
+  
+  .menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .menu li {
+    margin: 10px 0;
+  }
+  
+  .menu a {
+    padding: 10px 0;
+  }
+  
+  .menu-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url('images/menu-icon.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+  }
+  
+  .menu-toggle.active {
+    background-image: url('images/close-icon.png');
+  }
+  
+  .menu-toggle:focus {
+    outline: none;
+  }
+  
+  .menu-toggle:focus:not(:active) {
+    border: 1px solid #fff;
+  }
+  
+  .menu-toggle:active {
+    transform: translateY(2px);
+  }
+  
+  .menu-toggle:hover {
+    border: 1px solid #fff;
+  }
+  
+  .menu-toggle:hover:not(:active) {
+    transform: translateY(-2px);
+  }
+  
+  .menu-toggle:focus-visible {
+    border: 1px solid #fff;
+  }
+  
+  .menu-toggle:focus-visible:not(:active) {
+    transform: translateY(-2px);
+  }
+  
+  .menu-toggle::-moz-focus-inner {
+    border: 0;
+  }
+  
+  .menu-toggle.active + .menu {
+    display: block;
+  }
+}
+
+.section {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.section .image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section .image-gallery img {
+  width: 200px;
+  height: 200px;
+  margin: 1rem;
+}
+
+.gallery img {
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .gallery img {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+  }
+}
+
+.gallery img {
+  margin: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .gallery img {
+    margin: 20px 0;
+  }
+}
+
+
+  
 
 /* Page content */
 .main {
@@ -120,35 +293,10 @@ aside {
     transition: 0.3s;
 }
 
-/* The email */
-.email {
-    font-family: 'Montserrat', sans-serif;
-    height: 100%;
-    width: 350px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-/* The email link */
-.email a {
-    font-family: 'Montserrat', sans-serif;
-    padding: 8px 32px 8px 8px;
-    text-decoration: none;
-    text-align: right;
-    font-size: 14px;
-    color: #696969;
-    display: block;
-    transition: 0.3s;
-}
 
 /* The showreel */
 .videocenter {
     text-align: center;
-    padding-top: 100px;
     width: fit-content;
     text-align: center;
     margin: 0 auto;
@@ -180,11 +328,6 @@ aside {
     transform: translateY(-50%);
 }
 
-#myVideo {
-    z-index: 1;
-}
-
-
 /* The gallery */
 .container {
     position: static;
@@ -195,22 +338,45 @@ aside {
     width: 100%;
     height: 100%;
     flex-wrap: wrap;
-    padding-top: 20px;
-    padding-bottom: 175px;
+    padding-top: 80px;
+    padding-bottom: 120px;
 }
 
 /* The gallery */
-.galleryimg {
-    width: 500px;
-    height: 350px;
-    object-fit: cover;
-    object-position: bottom;
-    padding: 15px;
+.image-container {
+  position: relative;
+  display: inline-block;
 }
 
-.galleryimg:hover {
-    cursor: pointer;
-    opacity: 50%;
+.image-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  /* Set the width and height of the overlay to match the image */
+  width: 100%;
+  height: 100%;
+  /* Set the z-index to ensure that the overlay is on top of the image */
+  z-index: 1;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
 }
 
 
@@ -273,3 +439,93 @@ aside {
     display: inline;
     transition: 0.3s;
 }
+
+/*New Gallery*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px 0px 0 0px;
+  }
+  
+  
+  .container .heading h3 span {
+    font-weight: 100;
+  }
+  
+  .container .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .container .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+  }
+  
+  .container .box .dream img {
+    width: 100%;
+  }
+  
+  
+  @media only screen and (max-width: 769px) {
+    .container .box {
+      flex-direction: column;
+    }
+  
+    .container .box .dream {
+      width: 100%;
+    }
+  
+  
+  
+  
+  
+  }
+  
+  @media only screen and (max-width: 643px) {
+    .container .heading {
+      width: 100%;
+    }
+  
+    .container .heading h3 {
+      font-size: 1em;
+  
+    }
+  
+  
+  
+  }
+
+  #aboutsection {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .about-image img{
+    width: 50%;
+    margin: 0 0 20px 20px;
+  }
+  
+  .about-paragraph {
+    width: 50%;
+    margin: 0 20px 20px 0;
+  }
+
+  .contact-paragraph {
+    width: 49%;
+    margin: 0 20px 20px 0;
+  }
