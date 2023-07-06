@@ -2,19 +2,34 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!--
+           Web-Development by Treasure Ngonyama | GET OUT OF MY HEAD!
+  -->
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="script.js"></script>
-  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <meta property="og:image" content="">
+  <meta property="og:type" content="Website">
+  <meta property="og:title" content="Treasure Ngonyama">
+  <meta property="og:url" content="https://www.treasurengonyama.com/">
+  <meta property="og:site_name" content="Treasure Ngonyama">
 
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <script src="script.js"></script>
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/montserrat">
   <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
   <title>TREASURE NGONYAMA</title>
+
+  <meta name="description" content="Art Director and Designer working within Branding and Illustration.">
+  <meta name="author" content="Treasure Ngonyama">
 
 </head>
 
@@ -26,126 +41,691 @@
     <img src="images/site-loader.gif" alt="Treasure Ngonyama">
   </aside>
 
-  <!--NAVBAR-->
-  <nav>
-    <a href="#section0" class="logo"><img src="images/logo.png" alt="Logo" width="400" height="25"
-        onclick="changeSection('section0')"></a>
-    <ul class="menu">
-      <li><a href="#workgallery">Work</a></li>
-      <li><a href="#"onclick="changeSection('aboutsection'); window.scrollTo(0, 0);">About</a></li>
-    </ul>
-  </nav>
+  <div class="floating-nav">
+    <a href="#home" class="nav-home">Home</a>
+    <a href="#workgallery" class="nav-work">Work</a>
+    <a href="#about" class="nav-about">About</a>
+    <a href="#contact" class="nav-contact">Contact</a>
+    <a href="#top" class="nav-arrow">↑</a>
+  </div>
+
+  <header>
+    <h1 class="site-header">Treasure Ngonyama</h1>
+  </header>
+
+  <div class="scroller">
+    <div class="scroller-text">
+      <span>MOTION DESIGN • PRODUCT DESIGN • BRANDING • MOTION DESIGN • PRODUCT DESIGN • BRANDING • MOTION DESIGN •
+        PRODUCT DESIGN • BRANDING</span>
+      <span>MOTION DESIGN • PRODUCT DESIGN • BRANDING • MOTION DESIGN • PRODUCT DESIGN • BRANDING • MOTION DESIGN •
+        PRODUCT DESIGN • BRANDING</span>
+    </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------------------------->
 
   <!--SHOWREEL-->
-  <div class="section" id="section0">
+  <div class="showreel" id="home">
     <div class="videocenter">
       <video id="player" controls width="100%">
-        <source src="video/showreel.mp4" type="video/mp4">
+        <source src="images/Project9/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
 
+  <hr class="solid" id="work">
+
+  <header>
+    <h1 class="site-header">Work</h1>
+  </header>
+
+  <!------------------------------------------------------------------------------------------------------------------------------------->
+
   <!--SECTIONS-->
 
-  <div class="section" id="aboutsection" style="display: none;">
-    <h2>About</h2>
-    <div class="about-image"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-    <p id="about-paragraph">Hello! My name is Treasure. 
- 
-      I am currently working as a designer and animator. 
-      I create Motion Graphics, Art Direction and 3D Animation.  
-      </p>
-      <br>
-      <h2>Contact</h2>
-      <p id="contact-paragraph">treasurengonyama@gmail.com</p>
-  </div>
-
   <div class="section" id="section1" style="display: none;">
-    <h2>Section 1</h2>
-    <p>Section 1 content goes here.</p>
+    <img src="images/Project1/Banner.png" alt="Folks' Tales Banner" width="100%">
+    <h2 style="color: black;">Folks' Tales</h2>
+    <p style="color: black; font-size: 14px;">Folks’ Tales is a digital collection of South African fables and crafts
+      that sparks
+      connection
+      through creative play. The application provides a platform for children to engage with and
+      connect to various South African cultures by using storytelling, drawing, and crafting to cultivate
+      social awareness.
+      <br>
+      <br>
+      Our app is designed for South African children between the ages of six to eight. The different
+      difficulties of the stories encourage children within this development stage to expand their
+      knowledge while they play along. Folks’ Tales is available to any child who has access to a
+      phone or other digital device.
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 16px">Role</b>
+      <br>
+      <br>
+      <span style="color: grey; font-family: ClashDisplayRegular; font-size: 14px">Research, Interaction, Visual design,
+        Prototyping & Testing, Animation</span>
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 16px">Collaborators</b>
+      <br>
+      <br>
+      <span style="color: grey; font-family: ClashDisplayRegular; font-size: 14px">Olivia Fong & Karla Jansen</span>
+      <br>
+      <br>
+      <video id="player" autoplay muted loop width="90%">
+        <source src="images/Project1/AppDemo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="images/Project1/title.jpg" alt="title" style="width:100%">
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 18px">Project scope and timeline</b>
+      <br>
+      <br>
+      The project involved various research and design aspects to develop an effective digital solution.
+      We began by establishing the scope of the work at hand which helped us define our project goals and determine what
+      was feasible to achieve.
+      <img src="images/Project1/scope.jpg" alt="scope" style="width:100%">
+      <img src="images/Project1/timeline.jpg" alt="timeline" style="width:100%">
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 18px">Concept moodboard</b>
+      <br>
+      <br>
+      We researched South African themed arts and crafts projects, and various traditional fables to develop the game
+      concept.
+      <br>
+      <br>
+      <img src="images/Project1/moodboard.jpg" alt="moodboard" style="width:100%">
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 18px">Research</b>
+      <br>
+      <br>
+      Primary and secondary research was fundamental in our app development, allowing us to support and validate our
+      game.
+      The initial research phase helped to identify an appropriate and relevant topic for the digital intervention.
+      Broad research was conducted on playful learning, arts and crafts, and our target demographic.
+      Various academic, corporate, and internet sources were consulted.
+      Our research findings illustrated the key aspects of play and the benefits of art in child development.
+      <br>
+      <br>
+      <img src="images/Project1/research1.jpg" alt="research1" style="width:100%">
+      <img src="images/Project1/research2.jpg" alt="research2" style="width:100%">
+      <br>
+      <br>
+      We began our primary research by conducting an online survey for child caregivers.
+      The survey comprised of quantitative questions to provide statistical information about our target demographic,
+      preferred types of play, and access to supplies.
+      We also conducted qualitative research to gain a broad understanding of different play experiences and learning
+      perspectives.
+      We complied long-form, open-ended questions for caregivers in addition to interviewing a child educator.
+      The above data sets are taken from sixteen responses.
+      <br>
+      <br>
+      <img src="images/Project1/research3.jpg" alt="research3" style="width:100%">
+      We conducted multiple play testing sessions to research, test, and iteratively design Folks' Tales.
+      Our play sessions involved engaging with an analogue prototype of our digital intervention; we used storybooks,
+      drawing activities, and a crafting project to emulate key aspects of our app and gameplay.
+      The sessions engaged with different kinds of play to explore the application of our initial research in practice.
+      The play testing allowed us to co-design with our target demographic by considering their feedback and including
+      them in the development of Folks' Tales.
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 18px">Key insights from the research</b>
+      <br>
+      <br>
+      <img src="images/Project1/insights.jpg" alt="insights" style="width:100%">
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 18px">Project goals</b>
+      <br>
+      <br>
+      After conducting preliminary research and establishing the focus of our app, we defined goals for our project
+      development.
+      <br>
+      <br>
+      <img src="images/Project1/goals.jpg" alt="goals" style="width:100%">
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 18px">Competitor feature map</b>
+      <br>
+      <br>
+      A competitor feature map was created to establish necessary and appropriate features for Folks' Tales.
+      We examined various children's apps that involve drawing, crafting, or storytelling to explore the features that
+      contribute to a successful play interaction.
+      This research also identified a gap in the market for our digital intervention.
+      <br>
+      <br>
+      <img src="images/Project1/competitor.jpg" alt="competitor" style="width:100%">
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 18px">User flow</b>
+      <br>
+      <br>
+      We established a basic user flow to guide the app's navigation.
+      Folks' Tales follows a linear progression to ensure a straightforward and uncomplicated play experience.
+      The gameplay creates a meaningful, fun experience that children can engage with on a personal level.
+      <br>
+      <br>
+      <img src="images/Project1/flow.jpg" alt="flow" style="width:100%">
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 18px">User interface</b>
+      <br>
+      <br>
+      The Folks' Tales visual language combines bold colours and shapes with tactile textures to reflect the app's
+      underpinning theme of arts and crafts.
+      The clean interface creates a space for open-ended play so that the child may interpret and experience the game in
+      their own creative way.
+      <br>
+      <br>
+      <img src="images/Project1/interface.png" alt="interface" style="width:100%">
+      <br>
+      <br>
+      <img src="images/Project1/typography.png" alt="typography" style="width:100%">
+      <br>
+      <br>
+      Folks' Tales typography consists of Crafty Display paired with Futura PT.
+      The hand-cut font reflects the fun and creative feeling of the brand, while Futura’s modern sans serif ensures
+      readability throughout the app.
+      Folks' Tales mascot, Crafty Croc, is also hand-crafted from paper to enhance the tactile feel of the visual
+      language.
+      Folks' Tales colour palette is a simple twist on the colours of the South African flag; the palette creates a
+      sense of youthfulness and fun.
+      Distinct patterning combines different textures, colours, shapes, and simple line work to reflect the conceptual
+      underpinnings of the app's gameplay.
+      <br>
+      <br>
+      <img src="images/Project1/colour.jpg" alt="colour" style="width:100%">
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 18px">Final outcome</b>
+      <br>
+      <br>
+      ​​​​​​​​​​​​​​Folks' Tales is a digital platform that encourages cultural connection through arts and crafts.
+      <br>
+      <br>
+      <img src="images/Project1/interface.png" alt="interface" style="width:100%">
+      <br>
+      <br>
+      <img src="images/Project1/final.png" alt="Final" style="width:100%">
+      <img src="images/Project1/final2.png" alt="Final2" style="width:100%">
+      <img src="images/Project1/final3.png" alt="Final3" style="width:100%">
+      <img src="images/Project1/final4.png" alt="Final4" style="width:100%">
+      <img src="images/Project1/images.jpg" alt="images" style="width:100%">
+      <br>
+      <br>
+      <b style="color: black; font-family: grifter; font-size: 18px">Play Folks' Tales!</b>
+      <br>
+      <br>
+      <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="90%" height="650px"
+        src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F10vt7BEfrXJwcFWRrf3A99%2FFolks'-Tales%3Fscaling%3Dscale-down%26page-id%3D533%253A742%26starting-point-node-id%3D533%253A751%26node-id%3D533-751%26mode%3Ddesign%26t%3Dg4HqZ9rD67xw55RS-1"
+        allowfullscreen></iframe>
+      <img src="images/Project1/bye.jpg" alt="bye" style="width:100%">
+    </p>
 
-    <video id="player" controls width="70%">
-      <source src="video/showreel.mp4" type="video/mp4" />
-    </video>
   </div>
+
+
+  <!--Section2-->
 
   <div class="section" id="section2" style="display: none;">
     <div class="sectioncontainer">
+      <img src="images/Project2/Banner.png" alt="banner" style="width:100%">
+      <br>
+      <br>
       <h2 class="text-center">BENT</h2>
-      <p class="text-center">BENT is a brand inspired by the early days of animation, following the topic of Silence is
+      <p style="color: rgb(255, 255, 255); font-size: 14px;" class="text-center">BENT is a brand inspired by the early
+        days of animation, following the topic of Silence is
         Golden,
         Rubber Hose animation was the first animation style that became standardized in the American animation industry.
         The defining feature of the style is arms and legs that are typically simple, flowing curves, without
         articulation - limbs that bend.
+        <br><br>
         The stories of the time made heavy use of the comedic style called slapstick, this is characterised by the use
         of physical gags to communicate.
+        <br>
         BENT takes these elements and elevates them to a new level. This is a brand that finds the simplest and toughest
         solution to creating the strongest board possible,
-        a brand that can bend but will never break.</p>
-      <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-      </div>
+        a brand that can bend but will never break.
+      </p>
+      <br>
+      <br>
+      <video id="player" controls width="90%">
+        <source src="images/Project2/promo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <br>
+      <br>
+      <b style="color: rgb(255, 255, 255); font-family: grifter; font-size: 16px">Landing Page</b>
+      <br>
+      <br>
+      <img src="images/Project2/landingpage.jpg" alt="landing" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project2/01.png" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project2/02.png" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project2/03.png" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project2/04.png" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project2/05.png" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project2/06.png" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project2/07.png" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project2/08.png" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project2/09.png" alt="banner" style="width:50%">
+      <img src="images/Project2/12.png" alt="banner" style="width:50%">
+      <img src="images/Project2/13.png" alt="banner" style="width:50%">
     </div>
   </div>
 
+  <!--Section3-->
+
   <div class="section" id="section3" style="display: none;">
-    <div class="sectioncontainer">
-      <h2 class="text-center">Bent</h2>
-      <p class="text-center">Section 2 content goes here.</p>
-      <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-      </div>
+    <div class="sectioncontainer" style="background-color: rgb(0, 0, 0);">
+      <img src="images/Project3/Banner.png" alt="banner" style="width:100%">
+      <br>
+      <br>
+      <h2 class="text-center">DICTATORSHIP — A Cult Classic</h2>
+      <p style="color: rgb(255, 255, 255); font-size: 14px;" class="text-center">
+        Ever wanted to take over the world? Well with this helpful how-to guide, even the most clueless of budding
+        authoritarians has a shot.
+        Dictatorships: A Cult Classic is an informative video detailing the links and similarities between cult leaders
+        and dictators, and how these methods could be utilized to achieve world domination.
+        <br>The video takes the form of bootcamp-style propaganda, produced and branded by the fictional institution
+        Camp Supremacy, and its mascot Crownie.
+        Camp Supremacy has produced many fine dictators and cult leaders over the years, and now as a new recruit, their
+        tried and tested methods are yours to use - for better or for worse.
+        <br>
+        <br>
+        Tonally and stylistically, the video draws inspiration from Looney Tunes and Rubber Hose style animation, and
+        makes use of shape language and iconography from soviet-propaganda posters and war-time media.
+        The result is an eerily cheery guide that allows the audience to make their own deductions about whether great
+        power in a single person's hands is ever a good idea.
+      </p>
+      <br>
+      <br>
+      <b style="color: rgb(255, 255, 255); font-family: grifter; font-size: 16px">Collaborators</b>
+      <br>
+      <br>
+      <span style="color: grey; font-family: ClashDisplayRegular; font-size: 14px">Sally Etsebeth</span>
+      <br>
+      <br>
+      <video id="player" controls width="90%" poster="covers/project3">
+        <source src="images/Project3/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <br>
+      <br>
+      <b style="color: rgb(255, 255, 255); font-family: grifter; font-size: 16px">Moodboard</b>
+      <br>
+      <br><img src="images/Project3/moodboard.png" alt="moodboard" style="width:100%">
+      <br>
+      <br>
+      <b style="color: rgb(255, 255, 255); font-family: grifter; font-size: 16px">All the pieces</b>
+      <br>
+      <br>
+      <img src="images/Project3/pieces.png" alt="pieces" style="width:100%">
+      <br>
+      <br>
+      <b style="color: rgb(255, 255, 255); font-family: grifter; font-size: 16px">Storyboards</b>
+      <br>
+      <br>
+      <img src="images/Project3/storyboards.png" alt="storyboards" style="width:100%">
+      <br>
+      <br>
+      <b style="color: rgb(255, 255, 255); font-family: grifter; font-size: 16px">Stills</b>
+      <br>
+      <br>
+      <img src="images/Project3/stills.jpg" alt="stills" style="width:100%">
+      <br>
+      <br>
     </div>
   </div>
+
+
+  <!--Section 4-->
 
   <div class="section" id="section4" style="display: none;">
     <div class="sectioncontainer">
-      <h2 class="text-center">Bent</h2>
-      <p class="text-center">Section 2 content goes here.</p>
-      <div class="gallery" style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center;">
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
-        <div class="gallery-item"><img src="images/gallery01.png" alt="Placeholder Image"></div>
+      <img src="images/Project4/banner.jpg" alt="banner" style="width:100%">
+      <br>
+      <br>
+      <h2 style="color: black;">Vivere</h2>
+      <p style="color: rgb(0, 0, 0); font-size: 14px;" class="text-center">
+        Vivere, meaning "to live," is an international banking app that caters to the discerning needs of ambitious
+        professionals who prioritize both work and travel.<br>
+        With a focus on luxury and convenience, Vivere offers a suite of exclusive financial services tailored to
+        enhance the lifestyles of individuals seeking a seamless banking experience. <br>
+        This comprehensive case study presents the branding strategy and key messaging for Vivere, aiming to position it
+        as the ultimate luxury banking app for the modern global professional.</p>
+      <br>
+      <br>
+      <img src="images/Project4/Artboard 1.jpg" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project4/Artboard 2.jpg" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project4/Artboard 3.jpg" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project4/Artboard 4.jpg" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project4/Artboard 5.jpg" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project4/Artboard 7.jpg" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project4/Artboard 10.jpg" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project4/Artboard 11.jpg" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <img src="images/Project4/Artboard 12.jpg" alt="banner" style="width:50%">
+      <br>
+      <br>
+      <div id="wrapper" style="width: 50%">
+        <img src="images/Project4/01 Login Demo.gif" id="home1" alt="banner" style="width:50%">
+        <img src="images/Project4/02 Wallet Demo.gif" id="home2" alt="banner" style="width:50%">
+        <div class="clear"></div>
+      </div>
+      <br>
+      <div id="wrapper" style="width: 50%">
+        <img src="images/Project4/03 Load Wallet Demo.gif" id="home1" alt="banner" style="width:50%">
+        <img src="images/Project4/04 Transfer Money Demo.gif" id="home2" alt="banner" style="width:50%">
+        <div class="clear"></div>
+      </div>
+      <br>
+      <div id="wrapper" style="width: 50%">
+        <img src="images/Project4/05 Cards_3.gif" id="home1" alt="banner" style="width:50%">
+        <img src="images/Project4/06 What's New Demo.gif" id="home2" alt="banner" style="width:50%">
+        <div class="clear"></div>
+        <br>
+        <div id="wrapper" style="width: 50%">
+          <img src="images/Project4/007 ATM Locator_3.gif" id="home1" alt="banner" style="width:50%">
+          <img src="images/Project4/008 ATM Locator 2_3.gif" id="home2" alt="banner" style="width:50%">
+          <div class="clear"></div>
+        </div>
+        <br>
+        <div id="wrapper" style="width: 50%">
+          <img src="images/Project4/9.gif" id="home1" alt="banner" style="width:50%">
+          <img src="images/Project4/008 ATM Locator 2_3.gif" id="home2" alt="banner" style="width:50%">
+          <div class="clear"></div>
+        </div>
+        <br>
       </div>
     </div>
   </div>
+
+  <!--Section 5-->
+
+  <div class="section" id="section5" style="display: none;">
+    <div class="sectioncontainer">
+      <br>
+      <br>
+      <h2 style="color: rgb(255, 255, 255);">Standard Bank</h2>
+      <p style="color: rgb(255, 255, 255); font-size: 14px;" class="text-center">Assorted work created for Standard Bank
+      </p>
+      <br>
+      <div id="wrapper">
+        <video id="home1" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/STB_Slide 16 - IYEZA Promo Smoke 1.mp4" />
+        </video>
+        <video id="home2" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/ Crypto Export 2.mp4" />
+        </video>
+        <div class="clear"></div>
+      </div>
+      <br>
+      <div id="wrapper">
+        <video id="home1" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/STB_34660 Hip Gogo_1.mp4" />
+        </video>
+        <video id="home2" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/STB_34660 Slay Queen_5.mp4" />
+        </video>
+        <div class="clear"></div>
+      </div>
+      <br>
+      <div id="wrapper">
+        <video id="home1" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/STB_EDIT_60_16x9.mp4" />
+        </video>
+        <video id="home2" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/STB_Gautrain 3.mp4" />
+        </video>
+        <div class="clear"></div>
+      </div>
+      <br>
+      <div id="wrapper">
+        <video id="home1" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/STB_Manifesto 60s.mp4" />
+        </video>
+        <video id="home2" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/STB_02 34597 uBettina Wethu RichMedia Puresave.mp4" />
+        </video>
+        <div class="clear"></div>
+      </div>
+      <br>
+      <div id="wrapper">
+        <video id="home1" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/STB_33995_WalletWise_CYBER-CRIME_OOH_2.mp4" />
+        </video>
+        <video id="home2" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/STB_33995_WalletWise_BUDGET MANAGEMENT_2.mp4" />
+        </video>
+        <div class="clear"></div>
+      </div>
+      <br>
+      <div id="wrapper">
+        <video id="home1" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/STB_UCount Credit MMS.mp4" />
+        </video>
+        <video id="home2" width="40%" controls>
+          <source type="video/mp4" src="images/Project5/STB_Wrap_Up_Video_1_204523 (1).mp4" />
+        </video>
+        <div class="clear"></div>
+      </div>
+      <br>
+    </div>
+  </div>
+  </div>
+
+  <!--Section 6-->
+
+  <div class="section" id="section6" style="display: none;">
+    <div class="sectioncontainer">
+      <img src="images/Project6/banner.jpg" alt="banner" style="width:100%">
+      <br>
+      <br>
+      <h2 style="color: rgb(255, 255, 255);">Hey Neighbour Redesign Concept</h2>
+      <p style="color: rgb(255, 255, 255); font-size: 14px;" class="text-center">A conceptual redesign for the upcoming
+        Hey
+        Neighbour Festival.</p>
+      <br>
+      <img src="images/Project6/site.jpg" alt="banner" style="width:60%">
+      <br>
+      <br>
+    </div>
+  </div>
+  </div>
+
+
+  <!--Section 7-->
+
+  <div class="section" id="section7" style="display: none;">
+    <div class="sectioncontainer">
+      <img src="images/Project7/banner.png" alt="banner" style="width:100%">
+      <br>
+      <br>
+      <h2 style="color: rgb(255, 255, 255);">PercivalAI</h2>
+      <p style="color: rgb(255, 255, 255); font-size: 14px;" class="text-center">
+        PercivalAI is a productivity personal AI assistant to address the challenges individuals face in managing their
+        busy lives.</p>
+      <br>
+      <br>
+      <b style="color: rgb(255, 255, 255); font-family: grifter; font-size: 18px">Scope</b><br>
+      <p style="color: rgb(255, 255, 255); font-size: 14px;" class="text-center">
+        1. Engaging hero section to capture visitors' attention and convey the value proposition of PercivalAI.<br>
+        2. Clear and concise sections highlighting key features, benefits, and testimonials.<br>
+        3. Responsive design for optimal viewing across different devices.<br>
+        4.Visual elements aligned with PercivalAI's brand identity and user interface.</p>
+      <br>
+      <video width="100%" controls>
+        <source type="video/mp4" src="images/Project7/sitefilm.mp4" />
+      </video>
+      <br>
+      <img src="images/Project7/logo.jpg" alt="logo" style="width:100%">
+      <br><br>
+      <b style="color: rgb(255, 255, 255); font-family: grifter; font-size: 18px">Colour</b>
+      <br><br>
+      <img src="images/Project7/colors.jpg" alt="colour" style="width:100%">
+      <img src="images/Project7/logooutline.jpg" alt="outline" style="width:100%">
+      <br>
+      <br>
+      <b style="color: rgb(255, 255, 255); font-family: grifter; font-size: 18px">Landing Page</b>
+      <br><br>
+      <img src="images/Project7/site.jpg" alt="site" style="width:100%">
+      <img src="images/Project7/landingpage.png" alt="landingpage" style="width:100%">
+      <img src="images/Project7/logomark.jpg" alt="logomark" style="width:100%">
+    </div>
+  </div>
+  </div>
+
+
+  <!--Section 8-->
+
+  <div class="section" id="section8" style="display: none;">
+    <h2>Animated Shorts</h2>
+    <p>Collection of short animated videos.</p>
+
+    <div id="wrapper">
+      <video id="home1" width="40%" controls>
+        <source type="video/mp4" src="images/Project8/Project8_Tube.mp4" />
+      </video>
+      <video id="home2" width="40%" controls>
+        <source type="video/mp4" src="images/Project8/Project8_Guitar.mp4" />
+      </video>
+      <div class="clear"></div>
+    </div>
+
+    <div id="wrapper">
+      <video id="home1" width="40%" controls>
+        <source type="video/mp4" src="images/Project8/Project8_Dlal.mp4" />
+      </video>
+      <video id="home2" width="40%" controls>
+        <source type="video/mp4" src="images/Project8/Project8_Rise.mp4" />
+      </video>
+      <div class="clear"></div>
+    </div>
+    <br>
+    <video width="90%" controls>
+      <source type="video/mp4" src="images/Project8/Top.mp4" />
+    </video>
+    <video width="90%" controls>
+      <source type="video/mp4" src="images/Project8/3xthree.mp4" />
+    </video>
+    <br>
+    <div id="wrapper">
+      <video id="home1" width="40%" controls>
+        <source type="video/mp4" src="images/Project8//Puzzle.mp4" />
+      </video>
+      <br>
+      <video id="home2" width="40%" controls>
+        <source type="video/mp4" src="images/Project8/Rubix.mp4" />
+      </video>
+      <div class="clear"></div>
+    </div>
+
+    <hr class="solid" id="work">
+
+  </div>
+
+
+  <!--Section 9-->
+
+  <div class="section" id="section9" style="display: none;">
+    <div class="sectioncontainer" style="background-color: rgb(0, 0, 0);">
+      <img src="images/Project9/banner.png" alt="banner" style="width:100%">
+      <br>
+      <br>
+      <h2 style="color: rgb(255, 255, 255);">Refined Vision</h2>
+      <p style="color: rgb(255, 255, 255); font-size: 14px;" class="text-center">
+        This project required the conceptualisation and storyboarding of an animation using a logo to express the brand
+        identity created for Homemakers Expo.
+        Key animation concepts such as timing, rhythm, pacing and movement are incorporated into the animation, each of
+        these adding to the communication of the brand.
+        Ultimately, this animation serves as marketing material for the brand and uses complex and creative technical
+        functions of the animation software to achieve that.</p>
+      <br>
+      <br>
+      <b style="color: rgb(255, 255, 255); font-family: grifter; font-size: 18px">Scope</b><br>
+      <p style="color: rgb(255, 255, 255); font-size: 14px;" class="text-center">
+        The animation builds on the beauty and simplicity of the tagline Refined Vision,
+        using clean and smooth animation to communicate the refined and elegant nature of the project.
+        The line pattern theme is incorporated into the composition through the trail's and cracks on the surface of
+        elements.
+        The project is meant to illicit a feeling of breathtaking beauty and wonder.
+      </p>
+      <br>
+      <video width="100%" controls>
+        <source type="video/mp4" src="images/Project9/video.mp4" />
+      </video>
+      <br>
+      <img src="images/Project9/storyboard.png" alt="storyboard" style="width:100%">
+      <img src="images/Project9/footer.png" alt="footer" style="width:100%">
+    </div>
+  </div>
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------------------------->
 
   <!--GALLERY-->
   <div class="container" id="workgallery">
     <div class="box">
 
       <div class="dream">
-        <div class="image-container" id="item1" onclick="changeSection('section1'); window.scrollTo(0, 0);">
-          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+        <div class="image-container" id="item1" data-section="section1"
+          onclick="changeSection('section1'); scrollToSection('work');">
+          <img src="images/covers/Cover1_Folks.gif" alt="Folks Tales" class="gallery-image">
           <div class="image-overlay">
-            <p>HAPPY DAYS</p>
+            <p>Folks Tales</p>
           </div>
         </div>
 
-        <div class="image-container" id="item2" onclick="changeSection('section2'); window.scrollTo(0, 0);">
-          <img src="images/covers/cover2.gif" alt="Your Image" class="gallery-image">
+        <div class="image-container" id="item2" data-section="section2"
+          onclick="changeSection('section2'); scrollToSection('work');">
+          <img src="images/covers/Cover2_Bent.gif" alt="Your Image" class="gallery-image">
           <div class="image-overlay">
             <p>BENT</p>
           </div>
         </div>
-        <div class="image-container" id="item3" onclick="changeSection('section3'); window.scrollTo(0, 0);">
-          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+        <div class="image-container" id="item3" data-section="section3"
+          onclick="changeSection('section3'); scrollToSection('work');">
+          <img src="images/covers/Cover3_Cults.png" alt="DICTATORSHIP — A Cult Classic" class="gallery-image">
           <div class="image-overlay">
-            <p>project 3</p>
+            <p>DICTATORSHIP — A Cult Classic</p>
           </div>
         </div>
 
@@ -153,22 +733,25 @@
       </div>
 
       <div class="dream">
-        <div class="image-container" id="item4" onclick="changeSection('section4'); window.scrollTo(0, 0);">
-          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+        <div class="image-container" id="item4" data-section="section4"
+          onclick="changeSection('section4'); scrollToSection('work');">
+          <img src="images/covers/Cover4_Vivere.png" alt="Your Image" class="gallery-image">
           <div class="image-overlay">
-            <p>Project 4</p>
+            <p>Vivere</p>
           </div>
         </div>
-        <div class="image-container" id="item5" onclick="changeSection('section5'); window.scrollTo(0, 0);">
-          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+        <div class="image-container" id="item5" data-section="section5"
+          onclick="changeSection('section5'); scrollToSection('work');">
+          <img src="images/covers/Cover5_Standard.gif" alt="Your Image" class="gallery-image">
           <div class="image-overlay">
-            <p>Text to show on hover</p>
+            <p>Standard Bank</p>
           </div>
         </div>
-        <div class="image-container" id="item6" onclick="changeSection('section6'); window.scrollTo(0, 0);">
-          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+        <div class="image-container" id="item6" data-section="section6"
+          onclick="changeSection('section6'); scrollToSection('work');">
+          <img src="images/covers/cover6_neighbour.jpg" alt="Your Image" class="gallery-image">
           <div class="image-overlay">
-            <p>Text to show on hover</p>
+            <p>Hey Neighbour Redesign</p>
           </div>
         </div>
 
@@ -176,44 +759,95 @@
       </div>
 
       <div class="dream">
-        <div class="image-container" id="item7" onclick="changeSection('section7'); window.scrollTo(0, 0);">
-          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+        <div class="image-container" id="item7" data-section="section7"
+          onclick="changeSection('section7'); scrollToSection('work');">
+          <img src="images/covers/Cover7_Percival.jpg" alt="Your Image" class="gallery-image">
           <div class="image-overlay">
-            <p>Text to show on hover</p>
+            <p>PercivalAI</p>
           </div>
         </div>
-        <div class="image-container" id="item8" onclick="changeSection('section8'); window.scrollTo(0, 0);">
-          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+        <div class="image-container" id="item8" data-section="section8"
+          onclick="changeSection('section8'); scrollToSection('work');">
+          <img src="images/covers/Cover8_Animated.gif" alt="Your Image" class="gallery-image">
           <div class="image-overlay">
-            <p>Text to show on hover</p>
+            <p>Animated Shorts</p>
           </div>
         </div>
-        <div class="image-container" id="item9" onclick="changeSection('section9'); window.scrollTo(0, 0);">
-          <img src="images/gallery01.png" alt="Your Image" class="gallery-image">
+        <div class="image-container" id="item9" data-section="section9"
+          onclick="changeSection('section9'); scrollToSection('work');">
+          <img src="images/covers/Cover9_Refined.gif" alt="Your Image" class="gallery-image">
           <div class="image-overlay">
-            <p>Text to show on hover</p>
+            <p>Refined Vision</p>
           </div>
         </div>
 
       </div>
-
-
 
 
     </div>
   </div>
 
-  <!--FOOTER-->
-  <footer id="myFooter" class="footer">
-    <a href="https://www.linkedin.com/in/treasure-ngonyama-b6113a205/" target="_blank" class="footer-link">Linkedin</a>
-    <a href="https://www.behance.net/ngonyama" target="_blank" class="footer-link">Behance</a>
-    <a href="https://www.instagram.com/trippytresor/" target="_blank" class="footer-link">Instagram</a>
-    <a href="https://www.youtube.com/c/trippytresor" target="_blank" class="footer-link">Youtube</a>
-  </footer>
+  <!------------------------------------------------------------------------------------------------------------------------------------->
 
-  <!--COPYRIGHT-->
-  <div id="myCopy" class="copy">
-    <p class="copy-link">©2023 TREASURE NGONYAMA.</p>
+  <!--ABOUT-->
+  <div class="aboutme">
+    <hr class="solid" id="about">
+
+    <header>
+      <h1 class="site-header">About</h1>
+    </header>
+
+    <section class="about-section">
+
+      <div class="about-content">
+
+        <div class="about-image">
+          <img src="images/about-pic.jpeg" alt="About Image">
+        </div>
+
+        <div class="about-text">
+          <h2>Hello! My Name is Treasure.</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget augue vitae elit varius eleifend.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!------------------------------------------------------------------------------------------------------------------------------------->
+
+  <!--FOOTER-->
+  <div class="scroller" id="contact">
+    <div class="scroller-text">
+      <span>LET'S GET TO WORK • LET'S GET TO WORK • LET'S GET TO WORK • LET'S GET TO WORK • LET'S GET TO WORK • LET'S
+        GET TO WORK • LET'S GET TO WORK</span>
+      <span>LET'S GET TO WORK • LET'S GET TO WORK • LET'S GET TO WORK • LET'S GET TO WORK • LET'S GET TO WORK • LET'S
+        GET TO WORK • LET'S GET TO WORK</span>
+    </div>
+  </div>
+
+  <div class="get-in-touch">
+    <p id="touch">
+      <span style="color: #bae719;">✦</span>
+      GET IN TOUCH
+      <span style="color: #bae719;">✦</span>
+    </p>
+    <a href="mailto:hello@treasurengonyama.com" class="email">hello@treasurengonyama.com</a>
+
+    <div class="footer-icons">
+      <a href='https://www.instagram.com/trippytresor/' target="_blank"><img href="#" src="images/icons/icon-ig.svg"
+          class="footer-icon"></a>
+      <a href='https://www.linkedin.com/in/treasure-ngonyama-b6113a205/' target="_blank"><img href="#"
+          src="images/icons/icon-li.svg" class="footer-icon"></a>
+      <a href='https://www.behance.net/ngonyama' target="_blank"><img href="#" src="images/icons/icon-be.svg"
+          class="footer-icon"></a>
+      <a href='https://www.youtube.com/c/trippytresor' target="_blank"><img href="#" src="images/icons/icon-yt.svg"
+          class="footer-icon"></a>
+    </div>
+
+    <p class="copyright">© MADE BY <u>TREASURE NGONYAMA</u>. 2023</p>
   </div>
 
 </body>
