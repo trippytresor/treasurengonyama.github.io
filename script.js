@@ -1,34 +1,35 @@
+/**
+ * Handles section switching for project details.
+ * @param {string} sectionId - The ID of the section to show.
+ */
 function changeSection(sectionId) {
-  var sections = document.querySelectorAll('.section');
-  var video = document.getElementById('player');
+  const sections = document.querySelectorAll('.section');
 
-  for (var i = 0; i < sections.length; i++) {
-    if (sections[i].id === sectionId) {
-      sections[i].style.display = 'block';
-      if (sections[i].contains(video)) {
-        video.play(); // Resume video playback
-      }
-    } else {
-      sections[i].style.display = 'none';
-      if (sections[i].contains(video)) {
-        video.pause(); // Pause video playback
-      }
+  // Pause all Vimeo videos when changing sections
+  const iframes = document.querySelectorAll('iframe');
+  iframes.forEach(iframe => {
+    if (iframe.src.includes('vimeo.com')) {
+      const player = new Vimeo.Player(iframe);
+      player.pause().catch(function(error) {
+        // Ignore errors if player is not ready or other issues
+        console.error('Error pausing Vimeo player:', error);
+      });
     }
-  }
+  });
+
+  sections.forEach(section => {
+    if (section.id === sectionId) {
+      section.style.display = 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  });
 }
 
-// Attach event listener to detect section changes
-document.addEventListener('DOMContentLoaded', function() {
-  var sectionLinks = document.querySelectorAll('.section-link');
-  for (var i = 0; i < sectionLinks.length; i++) {
-    sectionLinks[i].addEventListener('click', function(event) {
-      var sectionId = event.target.getAttribute('data-section');
-      changeSection(sectionId);
-    });
-  }
-});
-
-//Scroll to section
+/**
+ * Scrolls to a specific section on the page.
+ * @param {string} sectionId - The ID of the target element.
+ */
 function scrollToSection(sectionId) {
   const targetSection = document.getElementById(sectionId);
 
@@ -38,3 +39,10 @@ function scrollToSection(sectionId) {
     });
   }
 }
+
+// Initial setup on DOM load
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Website initialized.');
+  // The gallery items use inline onclick, so no additional listeners are strictly needed here
+  // but we could add them for better practice if we refactored further.
+});
