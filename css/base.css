@@ -218,6 +218,14 @@ img {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
 }
 
+.showreel-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #000;
+}
+
 /* ===================================
    TAGLINE SECTION
    =================================== */
