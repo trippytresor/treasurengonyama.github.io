@@ -147,6 +147,12 @@ img {
   text-transform: uppercase;
 }
 
+.nav-link--cta {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
 /* .nav-descriptor removed per new layout */
 
 /* ===================================
