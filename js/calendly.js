@@ -10,7 +10,7 @@
  */
 (function () {
   // Your Calendly scheduling link, e.g. 'https://calendly.com/your-name/30min'
-  var CALENDLY_URL = 'https://calendly.com/YOUR-CALENDLY-LINK';
+  var CALENDLY_URL = 'https://calendly.com/treasurengonyama';
 
   var configured = CALENDLY_URL.indexOf('YOUR-CALENDLY-LINK') === -1;
   if (!configured) return;
